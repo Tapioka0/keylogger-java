@@ -7,10 +7,13 @@ import org.jnativehook.keyboard.NativeKeyListener;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
+
+
 public class GlobalKeyListener implements NativeKeyListener {
 
     public void nativeKeyPressed(NativeKeyEvent e) {
         System.out.println("Key Pressed: " + NativeKeyEvent.getKeyText(e.getKeyCode()));
+
 
         if (e.getKeyCode() == NativeKeyEvent.VC_ESCAPE) {
             try {
@@ -30,6 +33,7 @@ public class GlobalKeyListener implements NativeKeyListener {
     }
 
     public static void main(String[] args) {
+
 
         try {
             Logger logger = Logger.getLogger(GlobalScreen.class.getPackage().getName());
